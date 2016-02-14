@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B6E62C72E22DDDD034B15B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4CB8C78CA37AFC34E6186E /* libPods.a */; };
-		465E30B11C6DAFAD00E86BD9 /* TableControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E30B01C6DAFAD00E86BD9 /* TableControllerView.swift */; };
+		465E30B11C6DAFAD00E86BD9 /* LoggedInUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E30B01C6DAFAD00E86BD9 /* LoggedInUserController.swift */; };
 		468B2FB21C6D9C440047E131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B2FB11C6D9C440047E131 /* AppDelegate.swift */; };
 		468B2FB41C6D9C440047E131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B2FB31C6D9C440047E131 /* ViewController.swift */; };
 		468B2FB71C6D9C440047E131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B2FB51C6D9C440047E131 /* Main.storyboard */; };
@@ -16,6 +16,11 @@
 		468B2FBC1C6D9C440047E131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468B2FBA1C6D9C440047E131 /* LaunchScreen.storyboard */; };
 		468B2FC71C6D9C440047E131 /* one2manyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B2FC61C6D9C440047E131 /* one2manyTests.swift */; };
 		468B2FD21C6D9C440047E131 /* one2manyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468B2FD11C6D9C440047E131 /* one2manyUITests.swift */; };
+		46DB91C51C6EE50300292DB7 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB91C41C6EE50300292DB7 /* UserTableViewCell.swift */; };
+		46DB91C71C6EE51A00292DB7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB91C61C6EE51A00292DB7 /* LoginViewController.swift */; };
+		46DB91C91C6EE53300292DB7 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB91C81C6EE53300292DB7 /* CreateAccountViewController.swift */; };
+		46DB91CD1C6EE5BF00292DB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB91CC1C6EE5BF00292DB7 /* Constants.swift */; };
+		46DB91CF1C6EE5E900292DB7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB91CE1C6EE5E900292DB7 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		2F6F061D3B4299CFB3FABABB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		465E30B01C6DAFAD00E86BD9 /* TableControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableControllerView.swift; sourceTree = "<group>"; };
+		465E30B01C6DAFAD00E86BD9 /* LoggedInUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInUserController.swift; sourceTree = "<group>"; };
 		465E30B21C6DB6C400E86BD9 /* one2many-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "one2many-Bridging-Header.h"; sourceTree = "<group>"; };
 		468B2FAE1C6D9C440047E131 /* one2many.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = one2many.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468B2FB11C6D9C440047E131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +57,11 @@
 		468B2FCD1C6D9C440047E131 /* one2manyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = one2manyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		468B2FD11C6D9C440047E131 /* one2manyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = one2manyUITests.swift; sourceTree = "<group>"; };
 		468B2FD31C6D9C440047E131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46DB91C41C6EE50300292DB7 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		46DB91C61C6EE51A00292DB7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		46DB91C81C6EE53300292DB7 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		46DB91CC1C6EE5BF00292DB7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46DB91CE1C6EE5E900292DB7 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BB4CB8C78CA37AFC34E6186E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC36A28836FAFE337326992 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,13 +117,17 @@
 		468B2FB01C6D9C440047E131 /* one2many */ = {
 			isa = PBXGroup;
 			children = (
+				46DB91C31C6EE4DE00292DB7 /* Utility */,
+				46DB91C21C6EE4D600292DB7 /* Model */,
+				46DB91C11C6EE4D000292DB7 /* View */,
+				46DB91C01C6EE4C800292DB7 /* Controller */,
+				46DB91BF1C6EE4B800292DB7 /* Service */,
 				468B2FB11C6D9C440047E131 /* AppDelegate.swift */,
 				468B2FB31C6D9C440047E131 /* ViewController.swift */,
 				468B2FB51C6D9C440047E131 /* Main.storyboard */,
 				468B2FB81C6D9C440047E131 /* Assets.xcassets */,
 				468B2FBA1C6D9C440047E131 /* LaunchScreen.storyboard */,
 				468B2FBD1C6D9C440047E131 /* Info.plist */,
-				465E30B01C6DAFAD00E86BD9 /* TableControllerView.swift */,
 				465E30B21C6DB6C400E86BD9 /* one2many-Bridging-Header.h */,
 			);
 			path = one2many;
@@ -135,6 +149,47 @@
 				468B2FD31C6D9C440047E131 /* Info.plist */,
 			);
 			path = one2manyUITests;
+			sourceTree = "<group>";
+		};
+		46DB91BF1C6EE4B800292DB7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				46DB91CE1C6EE5E900292DB7 /* DataService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		46DB91C01C6EE4C800292DB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				465E30B01C6DAFAD00E86BD9 /* LoggedInUserController.swift */,
+				46DB91C61C6EE51A00292DB7 /* LoginViewController.swift */,
+				46DB91C81C6EE53300292DB7 /* CreateAccountViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		46DB91C11C6EE4D000292DB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46DB91C41C6EE50300292DB7 /* UserTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		46DB91C21C6EE4D600292DB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		46DB91C31C6EE4DE00292DB7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				46DB91CC1C6EE5BF00292DB7 /* Constants.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		71DB472697043EB64BFEF3E5 /* Pods */ = {
@@ -339,9 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DB91CF1C6EE5E900292DB7 /* DataService.swift in Sources */,
+				46DB91C91C6EE53300292DB7 /* CreateAccountViewController.swift in Sources */,
+				46DB91C51C6EE50300292DB7 /* UserTableViewCell.swift in Sources */,
 				468B2FB41C6D9C440047E131 /* ViewController.swift in Sources */,
 				468B2FB21C6D9C440047E131 /* AppDelegate.swift in Sources */,
-				465E30B11C6DAFAD00E86BD9 /* TableControllerView.swift in Sources */,
+				465E30B11C6DAFAD00E86BD9 /* LoggedInUserController.swift in Sources */,
+				46DB91C71C6EE51A00292DB7 /* LoginViewController.swift in Sources */,
+				46DB91CD1C6EE5BF00292DB7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

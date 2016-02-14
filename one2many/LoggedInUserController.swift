@@ -1,70 +1,70 @@
-//  TableControllerView.swift
-//  one2many
-//
-//  Created by Tung Ly on 2/11/16.
-//  Copyright © 2016 one2many. All rights reserved.
-//
-
 import UIKit
 
-class LoggedinUserController: UIViewController {
 
-//UITableViewDataSource {
+class LoggedInUserController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    let textCellIdentifier = "TextCell"
+    
+    var dummy = ["test array1", "test array2"]
+    
+    @IBOutlet weak var text: UILabel!
     
     
-//    @IBOutlet var weatherCondition: UILabel!
-//    
-//    let ref = Firebase(url: "https://test-swift-js.firebaseio.com/")
-//    
-//    
-//    
-//    let members = [
-//        ("mohamed gaggutur", "architect"),
-//        ("nikko lee", "developer"),
-//        ("tung ly", "party planner"),
-//        ("casey thavy", "stripper")
-//    ]
-//    
-//    
-//    
-//    
-//    //how many sections in table
-//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    //how many rows in table
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return members.count
-//    }
-//    
-//    //populate content
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell() // empty cell
-//        let (name, role) = members[indexPath.row]
-//        cell.textLabel?.text = name + " | " + role
-//        return cell
-//    }
-//    
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//        ref.observeEventType (.Value, withBlock: { snapshot in
-//            self.weatherCondition.text = snapshot.value as? String
-//        })
-//    }
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    
-//    
-//    @IBAction func updateWeather(sender: UIButton) {
-//        ref.setValue(sender.titleLabel?.text)
-//    }
+    var fire_ref = [String]()
+    
+
+    @IBAction func logout(sender: UIButton) {
+        DataService.dataService.CURRENT_USER_REF.unauth()
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
+        let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LogInScene")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = loginViewController
+    }
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        //** count users in firebase
+        var count = 0
+        DataService.dataService.USER_REF.observeEventType(.Value, withBlock: { snapshot in
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                for snap in snapshots {
+                    count = count + 1
+                    print(snap)
+                }
+            }
+            self.text.text = "user count: \(count)"
+        })
+
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dummy.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        
+        let row = indexPath.row
+        cell.textLabel?.text = dummy[row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        print(dummy[row])
+    }
 }
 
