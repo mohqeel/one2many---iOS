@@ -8,4 +8,4 @@
 
 import Foundation
 
-let BASE_URL = "https://test-swift-js.firebaseio.com/"/Users/tungply/Desktop/one2many/one2many/DataService.swift
+let BASE_URL = "https://test-swift-js.firebaseio.com/"
